@@ -1046,7 +1046,7 @@ CMakeFiles/renderer.dir/src/ui/button/button.cpp.o: ../src/ui/button/button.cpp 
 CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o: ../src/ui/checkbox/checkbox.cpp \
   /usr/include/stdc-predef.h
 
-CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o: ../src/ui/rectangle.cpp \
+CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o: ../src/ui/rectangle/rectangle.cpp \
   /usr/include/stdc-predef.h \
   ../include/renderer/ui/rectangle.h \
   ../include/renderer/core/shape.h \
@@ -1246,8 +1246,6 @@ CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o: ../src/ui/textbox/textbox.
 ../src/ui/textbox/textbox.cpp:
 
 ../src/ui/slider/slider.cpp:
-
-../src/ui/rectangle.cpp:
 
 ../src/ui/button/button.cpp:
 
@@ -1500,6 +1498,8 @@ CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o: ../src/ui/textbox/textbox.
 /usr/include/endian.h:
 
 /usr/include/bits/types/sigset_t.h:
+
+../src/ui/rectangle/rectangle.cpp:
 
 /usr/include/features.h:
 
