@@ -10,8 +10,9 @@ unsigned int inds[] =
 rectangle::rectangle(rect_pos position, color col, pos_def bounds, int window_width, int window_height)
     : window_width(window_width), window_height(window_height),
     definite_position(position), definite_bounds(bounds), definite_color(col),
-    body(calculate_position(position), 8 * sizeof(float), inds, 6 * sizeof(unsigned int), "../basic.vert", "../basic.frag")
+    body(calculate_position(position), 8 * sizeof(float), inds, 6 * sizeof(unsigned int), "../src/ui/rectangle/rectangle.vert", "../src/ui/rectangle/rectangle.frag")
 {
+    body.receive_shader().uniform4f("color", col.r / 255.0f, col.g / 255.0f, col.b / 255.0f, col.a);
 }
 
 float rectangle::calculate_single_position(float pos, NUM_TYPE type, bool x_y)
@@ -38,12 +39,7 @@ float* rectangle::calculate_position(rect_pos position)
         }
     }
 
-    for(int i = 2; i < 4; i++)
-    {
-        //raw_vertices[i] = raw_vertices[i] + raw_vertices[i-2];
-    }
-
-    if(!definite_bounds.up_bound)
+    if(definite_bounds.up_bound)
     {
         raw_vertices[1] *= -1;
         raw_vertices[3] *= -1;
@@ -60,22 +56,6 @@ float* rectangle::calculate_position(rect_pos position)
         raw_vertices[2], raw_vertices[3],
         raw_vertices[2], raw_vertices[1],
         raw_vertices[0], raw_vertices[1]
-    };
-
-    for(int i = 0; i < 4; i++)
-    {
-        for(int j = 0; j < 2; j++)
-        {
-            std::cout << vertices[i*2+j] << ", ";
-        }
-        std::cout << "\n";
-    }
-    float* result = new float[8]
-    {
-        -0.1, -0.1,
-        0.1, -0.1,
-        0.1, 0.1,
-        -0.1, 0.1
     };
 
     return vertices;
