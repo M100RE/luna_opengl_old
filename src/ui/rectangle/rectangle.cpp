@@ -39,6 +39,9 @@ float* rectangle::calculate_position(rect_pos position)
         }
     }
 
+    raw_vertices[2] += 1 + raw_vertices[0];
+    raw_vertices[3] += 1 + raw_vertices[1];
+
     if(definite_bounds.up_bound)
     {
         raw_vertices[1] *= -1;
