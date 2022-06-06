@@ -465,29 +465,29 @@ src/ui/checkbox/checkbox.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.s
 .PHONY : src/ui/checkbox/checkbox.cpp.s
 
-src/ui/rectangle/rectangle.o: src/ui/rectangle/rectangle.cpp.o
-.PHONY : src/ui/rectangle/rectangle.o
+src/ui/panel/panel.o: src/ui/panel/panel.cpp.o
+.PHONY : src/ui/panel/panel.o
 
 # target to build an object file
-src/ui/rectangle/rectangle.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o
-.PHONY : src/ui/rectangle/rectangle.cpp.o
+src/ui/panel/panel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o
+.PHONY : src/ui/panel/panel.cpp.o
 
-src/ui/rectangle/rectangle.i: src/ui/rectangle/rectangle.cpp.i
-.PHONY : src/ui/rectangle/rectangle.i
+src/ui/panel/panel.i: src/ui/panel/panel.cpp.i
+.PHONY : src/ui/panel/panel.i
 
 # target to preprocess a source file
-src/ui/rectangle/rectangle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.i
-.PHONY : src/ui/rectangle/rectangle.cpp.i
+src/ui/panel/panel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.i
+.PHONY : src/ui/panel/panel.cpp.i
 
-src/ui/rectangle/rectangle.s: src/ui/rectangle/rectangle.cpp.s
-.PHONY : src/ui/rectangle/rectangle.s
+src/ui/panel/panel.s: src/ui/panel/panel.cpp.s
+.PHONY : src/ui/panel/panel.s
 
 # target to generate assembly for a file
-src/ui/rectangle/rectangle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.s
-.PHONY : src/ui/rectangle/rectangle.cpp.s
+src/ui/panel/panel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.s
+.PHONY : src/ui/panel/panel.cpp.s
 
 src/ui/slider/slider.o: src/ui/slider/slider.cpp.o
 .PHONY : src/ui/slider/slider.o
@@ -588,9 +588,9 @@ help:
 	@echo "... src/ui/checkbox/checkbox.o"
 	@echo "... src/ui/checkbox/checkbox.i"
 	@echo "... src/ui/checkbox/checkbox.s"
-	@echo "... src/ui/rectangle/rectangle.o"
-	@echo "... src/ui/rectangle/rectangle.i"
-	@echo "... src/ui/rectangle/rectangle.s"
+	@echo "... src/ui/panel/panel.o"
+	@echo "... src/ui/panel/panel.i"
+	@echo "... src/ui/panel/panel.s"
 	@echo "... src/ui/slider/slider.o"
 	@echo "... src/ui/slider/slider.i"
 	@echo "... src/ui/slider/slider.s"
