@@ -2,8 +2,6 @@
 
 #include <glad/glad.h>
 
-shape::shape(){}
-
 shape::shape(const void* vertices, const int vertices_size, const void* indices, const int indices_size, const char* vertex_path, const char* fragment_path)
     : program(vertex_path, fragment_path)
 {

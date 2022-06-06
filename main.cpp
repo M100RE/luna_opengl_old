@@ -1,7 +1,6 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "renderer/core/shape.h"
-#include "renderer/ui/rectangle.h"
+#include "renderer/ui/panel.h"
 #include <iostream>
 
 int window_width = 400;
@@ -29,13 +28,13 @@ int main()
 
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    rectangle content(rect_pos(0, 0, 100, 100, PX, PX, PER, PER), color(32, 34, 34, 1), pos_def(false, false), window_width, window_height);
-    rectangle button(rect_pos(48, 48, 50, 50, PER, PER, PX, PX), color(0, 122, 204, 1), pos_def(false, false), window_width, window_height);
-    rectangle features(rect_pos(0, 0, 50, 100, PX, PX, PX, PER), color(62, 62, 66, 1), pos_def(true, false), window_width, window_height);
-    rectangle files(rect_pos(50, 0, 170, 100, PX, PX, PX, PER), color(45, 45, 48, 1), pos_def(false, false), window_width, window_height);
-    rectangle menu(rect_pos(0, 0, 150, 700, PX, PX, PX, PX), color(37, 37, 38, 1), pos_def(true, true), window_width, window_height);
+    panel content(rect_pos(0, 0, 100, 100, PX, PX, PER, PER), color(32, 34, 34, 1), pos_def(false, false), window_width, window_height);
+    panel button(rect_pos(48, 48, 50, 50, PER, PER, PX, PX), color(0, 122, 204, 0.5), pos_def(false, false), window_width, window_height);
+    panel features(rect_pos(0, 0, 50, 100, PX, PX, PX, PER), color(62, 62, 66, 1), pos_def(true, false), window_width, window_height);
+    panel files(rect_pos(50, 0, 170, 100, PX, PX, PX, PER), color(45, 45, 48, 1), pos_def(false, false), window_width, window_height);
+    panel menu(rect_pos(0, 0, 150, 700, PX, PX, PX, PX), color(37, 37, 38, 1), pos_def(true, true), window_width, window_height);
 
-    //rectangle example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
+    //panel example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
 
     while(!glfwWindowShouldClose(window))
     {

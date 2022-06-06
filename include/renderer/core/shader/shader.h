@@ -11,7 +11,6 @@ private:
     const char* fragment_source;
 public:
     shader_program(const char* vertex_path, const char* fragment_path);
-    shader_program();
     void compile();
     void link();
     void use();
