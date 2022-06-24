@@ -20,7 +20,6 @@ private:
     void* current_indices;
 public:
     shape(const void* vertices, const int vertices_size, const void* indices, const int indices_size, const char* vertex_path, const char* fragment_path);
-    shape();
     void draw();
     void change_vertices(const void* vertices, const int vertices_size);
     shader_program receive_shader();

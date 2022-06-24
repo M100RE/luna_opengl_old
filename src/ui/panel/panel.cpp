@@ -1,4 +1,4 @@
-#include "renderer/ui/rectangle.h"
+#include "renderer/ui/panel.h"
 #include <iostream>
 
 unsigned int inds[] = 
@@ -7,15 +7,15 @@ unsigned int inds[] =
     0, 3, 2
 };
 
-rectangle::rectangle(rect_pos position, color col, pos_def bounds, int window_width, int window_height)
+panel::panel(rect_pos position, color col, pos_def bounds, int window_width, int window_height)
     : window_width(window_width), window_height(window_height),
     definite_position(position), definite_bounds(bounds), definite_color(col),
-    body(calculate_position(position), 8 * sizeof(float), inds, 6 * sizeof(unsigned int), "../src/ui/rectangle/rectangle.vert", "../src/ui/rectangle/rectangle.frag")
+    shape(calculate_position(position), 8 * sizeof(float), inds, 6 * sizeof(unsigned int), "../src/ui/panel/panel.vert", "../src/ui/panel/panel.frag")
 {
-    body.receive_shader().uniform4f("color", col.r / 255.0f, col.g / 255.0f, col.b / 255.0f, col.a);
+    receive_shader().uniform4f("color", col.r, col.g, col.b, col.a);
 }
 
-float rectangle::calculate_single_position(float pos, NUM_TYPE type, bool x_y)
+float panel::calculate_single_position(float pos, NUM_TYPE type, bool x_y)
 {
     switch(type)
     {
@@ -26,7 +26,7 @@ float rectangle::calculate_single_position(float pos, NUM_TYPE type, bool x_y)
     }
 }
 
-float* rectangle::calculate_position(rect_pos position)
+float* panel::calculate_position(rect_pos position)
 {
     float raw_vertices[4];
 
@@ -64,13 +64,13 @@ float* rectangle::calculate_position(rect_pos position)
     return vertices;
 }
 
-void rectangle::resize(rect_pos position)
+void panel::resize(rect_pos position)
 {
     float* vertices = calculate_position(position);
-    body.change_vertices(vertices, 8 * sizeof(float));
+    change_vertices(vertices, 8 * sizeof(float));
 }
 
-void rectangle::update(int window_width, int window_height)
+void panel::update(int window_width, int window_height)
 {
     if(this->window_width != window_width || this->window_height != window_height)
     {
@@ -79,5 +79,5 @@ void rectangle::update(int window_width, int window_height)
         resize(definite_position);
     }
 
-    body.draw();
+    draw();
 }

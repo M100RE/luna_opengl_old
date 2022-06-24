@@ -1,5 +1,5 @@
-#ifndef _MSTL_RENDERER_UI_RECTANGLE_H
-#define _MSTL_RENDERER_UI_RECTANGLE_H
+#ifndef _MSTL_RENDERER_UI_panel_H
+#define _MSTL_RENDERER_UI_panel_H
 
 #include "renderer/core/shape.h"
 
@@ -35,7 +35,7 @@ struct color
     float r, g, b, a;
 
     color(float r, float g, float b, float a)
-        : r(r), g(g), b(b), a(a)
+        : r(r / 255.0f), g(g / 255.0f), b(b / 255.0f), a(a)
     {}
 };
 
@@ -48,10 +48,9 @@ struct pos_def
     {}
 };
 
-class rectangle
+class panel : public shape
 {
 private:
-    shape body;
     int window_width, window_height;
     rect_pos definite_position;
     pos_def definite_bounds;
@@ -59,15 +58,15 @@ private:
 
     float calculate_single_position(float pos, NUM_TYPE type, bool x_y); 
     float* calculate_position(rect_pos position);
+    void resize(rect_pos position);
 
 public:
-    rectangle(rect_pos position, color col, pos_def bounds, int window_width, int window_height);
+    panel(rect_pos position, color col, pos_def bounds, int window_width, int window_height);
 
     rect_pos get_pos();
 
-    void resize(rect_pos position);
     void update(int window_width, int window_height);
-    void update(const rectangle& parent);
+    void update(const panel& parent);
 };
 
 #endif
