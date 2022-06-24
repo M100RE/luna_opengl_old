@@ -1041,7 +1041,14 @@ CMakeFiles/renderer.dir/src/core/textures/texture.cpp.o: ../src/core/textures/te
   /usr/include/stdc-predef.h
 
 CMakeFiles/renderer.dir/src/ui/button/button.cpp.o: ../src/ui/button/button.cpp \
-  /usr/include/stdc-predef.h
+  /usr/include/stdc-predef.h \
+  ../include/renderer/ui/button.h \
+  ../include/renderer/ui/rectangle.h \
+  ../include/renderer/core/shape.h \
+  ../include/renderer/core/buffers/vbo.h \
+  ../include/renderer/core/buffers/vao.h \
+  ../include/renderer/core/shader/shader.h \
+  ../include/renderer/core/buffers/ebo.h
 
 CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o: ../src/ui/checkbox/checkbox.cpp \
   /usr/include/stdc-predef.h
@@ -1246,6 +1253,8 @@ CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o: ../src/ui/textbox/textbox.
 ../src/ui/textbox/textbox.cpp:
 
 ../src/ui/slider/slider.cpp:
+
+../include/renderer/ui/button.h:
 
 ../src/ui/button/button.cpp:
 

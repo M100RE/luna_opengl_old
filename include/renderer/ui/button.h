@@ -6,6 +6,6 @@
 class button
 {
     rectangle body;
-}
+};
 
 #endif
