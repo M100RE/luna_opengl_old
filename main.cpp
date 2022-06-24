@@ -3,6 +3,8 @@
 #include "renderer/ui/panel.h"
 #include "renderer/application/window.h"
 #include <iostream>
+#include <string>
+#include "renderer/application/constraints.h"
 
 int window_width = 400;
 int window_height = 400;
@@ -36,6 +38,9 @@ int main()
 
     //panel example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
 
+    constraints example;
+    example.parse_constraints("main_panel; ../panels.def");
+    
     while(!main_frame.window_should_close())
     {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
