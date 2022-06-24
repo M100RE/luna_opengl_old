@@ -6,5 +6,5 @@ CMakeFiles/renderer.dir/src/ui/button/button.cpp.o: \
  /home/m100re/development/c++/renderer/include/renderer/core/shape.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/vbo.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/vao.h \
- /home/m100re/development/c++/renderer/include/renderer/core/shader/shader.h \
+ /home/m100re/development/c++/renderer/include/renderer/core/shader.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/ebo.h

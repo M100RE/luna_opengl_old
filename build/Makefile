@@ -201,6 +201,30 @@ src/application/application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/application/application.cpp.s
 .PHONY : src/application/application.cpp.s
 
+src/application/constraints.o: src/application/constraints.cpp.o
+.PHONY : src/application/constraints.o
+
+# target to build an object file
+src/application/constraints.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/application/constraints.cpp.o
+.PHONY : src/application/constraints.cpp.o
+
+src/application/constraints.i: src/application/constraints.cpp.i
+.PHONY : src/application/constraints.i
+
+# target to preprocess a source file
+src/application/constraints.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/application/constraints.cpp.i
+.PHONY : src/application/constraints.cpp.i
+
+src/application/constraints.s: src/application/constraints.cpp.s
+.PHONY : src/application/constraints.s
+
+# target to generate assembly for a file
+src/application/constraints.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/application/constraints.cpp.s
+.PHONY : src/application/constraints.cpp.s
+
 src/application/window.o: src/application/window.cpp.o
 .PHONY : src/application/window.o
 
@@ -321,30 +345,6 @@ src/core/shader/shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/core/shader/shader.cpp.s
 .PHONY : src/core/shader/shader.cpp.s
 
-src/core/shader/shader_parser.o: src/core/shader/shader_parser.cpp.o
-.PHONY : src/core/shader/shader_parser.o
-
-# target to build an object file
-src/core/shader/shader_parser.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o
-.PHONY : src/core/shader/shader_parser.cpp.o
-
-src/core/shader/shader_parser.i: src/core/shader/shader_parser.cpp.i
-.PHONY : src/core/shader/shader_parser.i
-
-# target to preprocess a source file
-src/core/shader/shader_parser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.i
-.PHONY : src/core/shader/shader_parser.cpp.i
-
-src/core/shader/shader_parser.s: src/core/shader/shader_parser.cpp.s
-.PHONY : src/core/shader/shader_parser.s
-
-# target to generate assembly for a file
-src/core/shader/shader_parser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.s
-.PHONY : src/core/shader/shader_parser.cpp.s
-
 src/core/shape.o: src/core/shape.cpp.o
 .PHONY : src/core/shape.o
 
@@ -416,6 +416,30 @@ src/core/textures/texture.s: src/core/textures/texture.cpp.s
 src/core/textures/texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/core/textures/texture.cpp.s
 .PHONY : src/core/textures/texture.cpp.s
+
+src/shared/file_parser.o: src/shared/file_parser.cpp.o
+.PHONY : src/shared/file_parser.o
+
+# target to build an object file
+src/shared/file_parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o
+.PHONY : src/shared/file_parser.cpp.o
+
+src/shared/file_parser.i: src/shared/file_parser.cpp.i
+.PHONY : src/shared/file_parser.i
+
+# target to preprocess a source file
+src/shared/file_parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/shared/file_parser.cpp.i
+.PHONY : src/shared/file_parser.cpp.i
+
+src/shared/file_parser.s: src/shared/file_parser.cpp.s
+.PHONY : src/shared/file_parser.s
+
+# target to generate assembly for a file
+src/shared/file_parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/renderer.dir/build.make CMakeFiles/renderer.dir/src/shared/file_parser.cpp.s
+.PHONY : src/shared/file_parser.cpp.s
 
 src/ui/button/button.o: src/ui/button/button.cpp.o
 .PHONY : src/ui/button/button.o
@@ -555,6 +579,9 @@ help:
 	@echo "... src/application/application.o"
 	@echo "... src/application/application.i"
 	@echo "... src/application/application.s"
+	@echo "... src/application/constraints.o"
+	@echo "... src/application/constraints.i"
+	@echo "... src/application/constraints.s"
 	@echo "... src/application/window.o"
 	@echo "... src/application/window.i"
 	@echo "... src/application/window.s"
@@ -570,9 +597,6 @@ help:
 	@echo "... src/core/shader/shader.o"
 	@echo "... src/core/shader/shader.i"
 	@echo "... src/core/shader/shader.s"
-	@echo "... src/core/shader/shader_parser.o"
-	@echo "... src/core/shader/shader_parser.i"
-	@echo "... src/core/shader/shader_parser.s"
 	@echo "... src/core/shape.o"
 	@echo "... src/core/shape.i"
 	@echo "... src/core/shape.s"
@@ -582,6 +606,9 @@ help:
 	@echo "... src/core/textures/texture.o"
 	@echo "... src/core/textures/texture.i"
 	@echo "... src/core/textures/texture.s"
+	@echo "... src/shared/file_parser.o"
+	@echo "... src/shared/file_parser.i"
+	@echo "... src/shared/file_parser.s"
 	@echo "... src/ui/button/button.o"
 	@echo "... src/ui/button/button.i"
 	@echo "... src/ui/button/button.s"

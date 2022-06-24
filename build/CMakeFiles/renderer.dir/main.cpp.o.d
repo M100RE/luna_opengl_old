@@ -18,8 +18,9 @@ CMakeFiles/renderer.dir/main.cpp.o: \
  /home/m100re/development/c++/renderer/include/renderer/core/shape.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/vbo.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/vao.h \
- /home/m100re/development/c++/renderer/include/renderer/core/shader/shader.h \
+ /home/m100re/development/c++/renderer/include/renderer/core/shader.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/ebo.h \
+ /home/m100re/development/c++/renderer/include/renderer/application/window.h \
  /usr/include/c++/12.1.0/iostream \
  /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \

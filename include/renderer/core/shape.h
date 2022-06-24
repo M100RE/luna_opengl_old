@@ -3,7 +3,7 @@
 
 #include "buffers/vbo.h"
 #include "buffers/vao.h"
-#include "shader/shader.h"
+#include "shader.h"
 #include "buffers/ebo.h"
 
 class shape

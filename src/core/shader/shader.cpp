@@ -1,5 +1,5 @@
-#include "renderer/core/shader/shader.h"
-#include "renderer/core/shader/shader_parser.h"
+#include "renderer/core/shader.h"
+#include "renderer/shared/file_parser.h"
 
 #include <glad/glad.h>
 #include <iostream>
@@ -11,8 +11,8 @@ shader_program::shader_program(const char* vertex_path, const char* fragment_pat
     vertex_id = glCreateShader(GL_VERTEX_SHADER);
     fragment_id = glCreateShader(GL_FRAGMENT_SHADER);
 
-    vertex_source = parse_shader(vertex_path);
-    fragment_source = parse_shader(fragment_path);
+    vertex_source = parse_file(vertex_path);
+    fragment_source = parse_file(fragment_path);
 
     glShaderSource(vertex_id, 1, &vertex_source, NULL);
     glShaderSource(fragment_id, 1, &fragment_source, NULL);

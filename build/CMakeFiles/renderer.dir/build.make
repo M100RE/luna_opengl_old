@@ -97,10 +97,24 @@ CMakeFiles/renderer.dir/src/application/application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/application/application.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/application/application.cpp -o CMakeFiles/renderer.dir/src/application/application.cpp.s
 
+CMakeFiles/renderer.dir/src/application/constraints.cpp.o: CMakeFiles/renderer.dir/flags.make
+CMakeFiles/renderer.dir/src/application/constraints.cpp.o: ../src/application/constraints.cpp
+CMakeFiles/renderer.dir/src/application/constraints.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/renderer.dir/src/application/constraints.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/application/constraints.cpp.o -MF CMakeFiles/renderer.dir/src/application/constraints.cpp.o.d -o CMakeFiles/renderer.dir/src/application/constraints.cpp.o -c /home/m100re/development/c++/renderer/src/application/constraints.cpp
+
+CMakeFiles/renderer.dir/src/application/constraints.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/application/constraints.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m100re/development/c++/renderer/src/application/constraints.cpp > CMakeFiles/renderer.dir/src/application/constraints.cpp.i
+
+CMakeFiles/renderer.dir/src/application/constraints.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/application/constraints.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/application/constraints.cpp -o CMakeFiles/renderer.dir/src/application/constraints.cpp.s
+
 CMakeFiles/renderer.dir/src/application/window.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/application/window.cpp.o: ../src/application/window.cpp
 CMakeFiles/renderer.dir/src/application/window.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/renderer.dir/src/application/window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/renderer.dir/src/application/window.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/application/window.cpp.o -MF CMakeFiles/renderer.dir/src/application/window.cpp.o.d -o CMakeFiles/renderer.dir/src/application/window.cpp.o -c /home/m100re/development/c++/renderer/src/application/window.cpp
 
 CMakeFiles/renderer.dir/src/application/window.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/renderer.dir/src/application/window.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o: ../src/core/buffers/ebo.cpp
 CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o -MF CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o.d -o CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o -c /home/m100re/development/c++/renderer/src/core/buffers/ebo.cpp
 
 CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o: ../src/core/buffers/vao.cpp
 CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o -MF CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o.d -o CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o -c /home/m100re/development/c++/renderer/src/core/buffers/vao.cpp
 
 CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o: ../src/core/buffers/vbo.cpp
 CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o -MF CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o.d -o CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o -c /home/m100re/development/c++/renderer/src/core/buffers/vbo.cpp
 
 CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o: ../src/core/shader/shader.cpp
 CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o -MF CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o.d -o CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o -c /home/m100re/development/c++/renderer/src/core/shader/shader.cpp
 
 CMakeFiles/renderer.dir/src/core/shader/shader.cpp.i: cmake_force
@@ -166,20 +180,6 @@ CMakeFiles/renderer.dir/src/core/shader/shader.cpp.i: cmake_force
 CMakeFiles/renderer.dir/src/core/shader/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/core/shader/shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/core/shader/shader.cpp -o CMakeFiles/renderer.dir/src/core/shader/shader.cpp.s
-
-CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o: ../src/core/shader/shader_parser.cpp
-CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o -MF CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o.d -o CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o -c /home/m100re/development/c++/renderer/src/core/shader/shader_parser.cpp
-
-CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m100re/development/c++/renderer/src/core/shader/shader_parser.cpp > CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.i
-
-CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/core/shader/shader_parser.cpp -o CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.s
 
 CMakeFiles/renderer.dir/src/core/shape.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/core/shape.cpp.o: ../src/core/shape.cpp
@@ -223,10 +223,24 @@ CMakeFiles/renderer.dir/src/core/textures/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/core/textures/texture.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/core/textures/texture.cpp -o CMakeFiles/renderer.dir/src/core/textures/texture.cpp.s
 
+CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o: CMakeFiles/renderer.dir/flags.make
+CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o: ../src/shared/file_parser.cpp
+CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o -MF CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o.d -o CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o -c /home/m100re/development/c++/renderer/src/shared/file_parser.cpp
+
+CMakeFiles/renderer.dir/src/shared/file_parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/shared/file_parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m100re/development/c++/renderer/src/shared/file_parser.cpp > CMakeFiles/renderer.dir/src/shared/file_parser.cpp.i
+
+CMakeFiles/renderer.dir/src/shared/file_parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/shared/file_parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/shared/file_parser.cpp -o CMakeFiles/renderer.dir/src/shared/file_parser.cpp.s
+
 CMakeFiles/renderer.dir/src/ui/button/button.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/ui/button/button.cpp.o: ../src/ui/button/button.cpp
 CMakeFiles/renderer.dir/src/ui/button/button.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/renderer.dir/src/ui/button/button.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/renderer.dir/src/ui/button/button.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/button/button.cpp.o -MF CMakeFiles/renderer.dir/src/ui/button/button.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/button/button.cpp.o -c /home/m100re/development/c++/renderer/src/ui/button/button.cpp
 
 CMakeFiles/renderer.dir/src/ui/button/button.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/renderer.dir/src/ui/button/button.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o: ../src/ui/checkbox/checkbox.cpp
 CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o -MF CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o -c /home/m100re/development/c++/renderer/src/ui/checkbox/checkbox.cpp
 
 CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o: ../src/ui/panel/panel.cpp
 CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o -MF CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o -c /home/m100re/development/c++/renderer/src/ui/panel/panel.cpp
 
 CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o: ../src/ui/slider/slider.cpp
 CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o -MF CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o -c /home/m100re/development/c++/renderer/src/ui/slider/slider.cpp
 
 CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.s: cmake_force
 CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o: ../src/ui/textbox/textbox.cpp
 CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o -MF CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o -c /home/m100re/development/c++/renderer/src/ui/textbox/textbox.cpp
 
 CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.s: cmake_force
 CMakeFiles/renderer.dir/libs/glad/src/glad.c.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/libs/glad/src/glad.c.o: ../libs/glad/src/glad.c
 CMakeFiles/renderer.dir/libs/glad/src/glad.c.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/renderer.dir/libs/glad/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/renderer.dir/libs/glad/src/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/renderer.dir/libs/glad/src/glad.c.o -MF CMakeFiles/renderer.dir/libs/glad/src/glad.c.o.d -o CMakeFiles/renderer.dir/libs/glad/src/glad.c.o -c /home/m100re/development/c++/renderer/libs/glad/src/glad.c
 
 CMakeFiles/renderer.dir/libs/glad/src/glad.c.i: cmake_force
@@ -311,15 +325,16 @@ CMakeFiles/renderer.dir/libs/glad/src/glad.c.s: cmake_force
 renderer_OBJECTS = \
 "CMakeFiles/renderer.dir/main.cpp.o" \
 "CMakeFiles/renderer.dir/src/application/application.cpp.o" \
+"CMakeFiles/renderer.dir/src/application/constraints.cpp.o" \
 "CMakeFiles/renderer.dir/src/application/window.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o" \
-"CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/shape.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/textures/stb_image.cpp.o" \
 "CMakeFiles/renderer.dir/src/core/textures/texture.cpp.o" \
+"CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/button/button.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o" \
@@ -332,15 +347,16 @@ renderer_EXTERNAL_OBJECTS =
 
 renderer: CMakeFiles/renderer.dir/main.cpp.o
 renderer: CMakeFiles/renderer.dir/src/application/application.cpp.o
+renderer: CMakeFiles/renderer.dir/src/application/constraints.cpp.o
 renderer: CMakeFiles/renderer.dir/src/application/window.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/buffers/ebo.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/buffers/vbo.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/shader/shader.cpp.o
-renderer: CMakeFiles/renderer.dir/src/core/shader/shader_parser.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/shape.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/textures/stb_image.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/textures/texture.cpp.o
+renderer: CMakeFiles/renderer.dir/src/shared/file_parser.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/button/button.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/panel/panel.cpp.o
@@ -350,7 +366,7 @@ renderer: CMakeFiles/renderer.dir/libs/glad/src/glad.c.o
 renderer: CMakeFiles/renderer.dir/build.make
 renderer: /usr/lib/libglfw.so.3.3
 renderer: CMakeFiles/renderer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable renderer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable renderer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/renderer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

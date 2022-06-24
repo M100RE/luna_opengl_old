@@ -4,7 +4,7 @@ CMakeFiles/renderer.dir/src/core/shape.cpp.o: \
  /home/m100re/development/c++/renderer/include/renderer/core/shape.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/vbo.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/vao.h \
- /home/m100re/development/c++/renderer/include/renderer/core/shader/shader.h \
+ /home/m100re/development/c++/renderer/include/renderer/core/shader.h \
  /home/m100re/development/c++/renderer/include/renderer/core/buffers/ebo.h \
  /home/m100re/development/c++/renderer/libs/glad/include/glad/glad.h \
  /usr/include/KHR/khrplatform.h \

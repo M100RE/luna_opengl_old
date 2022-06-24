@@ -1,6 +1,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "renderer/ui/panel.h"
+#include "renderer/application/window.h"
 #include <iostream>
 
 int window_width = 400;
@@ -20,13 +21,12 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(500, 500, "title", nullptr, nullptr);
-    glfwMakeContextCurrent(window);
+    window main_frame(window_width, window_height, "title");
     
     gladLoadGL();
-    glViewport(0, 0, 500, 500);
+    glViewport(0, 0, window_width, window_height);
 
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    main_frame.set_framebuffer_size_callback(framebuffer_size_callback);
 
     panel content(rect_pos(0, 0, 100, 100, PX, PX, PER, PER), color(32, 34, 34, 1), pos_def(false, false), window_width, window_height);
     panel button(rect_pos(48, 48, 50, 50, PER, PER, PX, PX), color(0, 122, 204, 0.5), pos_def(false, false), window_width, window_height);
@@ -36,7 +36,7 @@ int main()
 
     //panel example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
 
-    while(!glfwWindowShouldClose(window))
+    while(!main_frame.window_should_close())
     {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
@@ -47,11 +47,10 @@ int main()
         features.update(window_width, window_height);
         files.update(window_width, window_height);
 
-        glfwSwapBuffers(window);
+        main_frame.swap_buffers();
         glfwPollEvents();
     }
-    
-    glfwDestroyWindow(window);
+
     glfwTerminate();
     
     return 0;
