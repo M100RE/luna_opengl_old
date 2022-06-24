@@ -251,19 +251,19 @@ CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/ui/checkbox/checkbox.cpp -o CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.s
 
-CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o: CMakeFiles/renderer.dir/flags.make
-CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o: ../src/ui/rectangle.cpp
-CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o -MF CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o -c /home/m100re/development/c++/renderer/src/ui/rectangle.cpp
+CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o: CMakeFiles/renderer.dir/flags.make
+CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o: ../src/ui/rectangle/rectangle.cpp
+CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o: CMakeFiles/renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/m100re/development/c++/renderer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o -MF CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o.d -o CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o -c /home/m100re/development/c++/renderer/src/ui/rectangle/rectangle.cpp
 
-CMakeFiles/renderer.dir/src/ui/rectangle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/ui/rectangle.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m100re/development/c++/renderer/src/ui/rectangle.cpp > CMakeFiles/renderer.dir/src/ui/rectangle.cpp.i
+CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m100re/development/c++/renderer/src/ui/rectangle/rectangle.cpp > CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.i
 
-CMakeFiles/renderer.dir/src/ui/rectangle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/ui/rectangle.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/ui/rectangle.cpp -o CMakeFiles/renderer.dir/src/ui/rectangle.cpp.s
+CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m100re/development/c++/renderer/src/ui/rectangle/rectangle.cpp -o CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.s
 
 CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o: CMakeFiles/renderer.dir/flags.make
 CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o: ../src/ui/slider/slider.cpp
@@ -322,7 +322,7 @@ renderer_OBJECTS = \
 "CMakeFiles/renderer.dir/src/core/textures/texture.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/button/button.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o" \
-"CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o" \
+"CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o" \
 "CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o" \
 "CMakeFiles/renderer.dir/libs/glad/src/glad.c.o"
@@ -343,7 +343,7 @@ renderer: CMakeFiles/renderer.dir/src/core/textures/stb_image.cpp.o
 renderer: CMakeFiles/renderer.dir/src/core/textures/texture.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/button/button.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/checkbox/checkbox.cpp.o
-renderer: CMakeFiles/renderer.dir/src/ui/rectangle.cpp.o
+renderer: CMakeFiles/renderer.dir/src/ui/rectangle/rectangle.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/slider/slider.cpp.o
 renderer: CMakeFiles/renderer.dir/src/ui/textbox/textbox.cpp.o
 renderer: CMakeFiles/renderer.dir/libs/glad/src/glad.c.o
