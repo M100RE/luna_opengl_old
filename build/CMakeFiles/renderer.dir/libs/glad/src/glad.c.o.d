@@ -1,5 +1,5 @@
 CMakeFiles/renderer.dir/libs/glad/src/glad.c.o: \
- /home/m100re/development/c++/renderer/libs/glad/src/glad.c \
+ /home/m100re/cloud/dev/c++/renderer/libs/glad/src/glad.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
@@ -33,7 +33,7 @@ CMakeFiles/renderer.dir/libs/glad/src/glad.c.o: \
  /usr/include/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/m100re/development/c++/renderer/libs/glad/include/glad/glad.h \
+ /home/m100re/cloud/dev/c++/renderer/libs/glad/include/glad/glad.h \
  /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \

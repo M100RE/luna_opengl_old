@@ -1,8 +1,8 @@
 CMakeFiles/renderer.dir/src/core/buffers/vao.cpp.o: \
- /home/m100re/development/c++/renderer/src/core/buffers/vao.cpp \
+ /home/m100re/cloud/dev/c++/renderer/src/core/buffers/vao.cpp \
  /usr/include/stdc-predef.h \
- /home/m100re/development/c++/renderer/include/renderer/core/buffers/vao.h \
- /home/m100re/development/c++/renderer/libs/glad/include/glad/glad.h \
+ /home/m100re/cloud/dev/c++/renderer/include/renderer/core/buffers/vao.h \
+ /home/m100re/cloud/dev/c++/renderer/libs/glad/include/glad/glad.h \
  /usr/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/m100re/development/c++/renderer/include -I/home/m100re/development/c++/renderer/libs/glad/include -I/home/m100re/development/c++/renderer/libs/glfw/include
+C_INCLUDES = -I/home/m100re/cloud/dev/c++/renderer/include -I/home/m100re/cloud/dev/c++/renderer/libs/glad/include -I/home/m100re/cloud/dev/c++/renderer/libs/glfw/include
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/m100re/development/c++/renderer/include -I/home/m100re/development/c++/renderer/libs/glad/include -I/home/m100re/development/c++/renderer/libs/glfw/include
+CXX_INCLUDES = -I/home/m100re/cloud/dev/c++/renderer/include -I/home/m100re/cloud/dev/c++/renderer/libs/glad/include -I/home/m100re/cloud/dev/c++/renderer/libs/glfw/include
 
 CXX_FLAGS = -std=gnu++17
 

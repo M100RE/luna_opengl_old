@@ -1,7 +1,7 @@
 CMakeFiles/renderer.dir/src/core/textures/stb_image.cpp.o: \
- /home/m100re/development/c++/renderer/src/core/textures/stb_image.cpp \
+ /home/m100re/cloud/dev/c++/renderer/src/core/textures/stb_image.cpp \
  /usr/include/stdc-predef.h \
- /home/m100re/development/c++/renderer/include/renderer/core/textures/stb_image.h \
+ /home/m100re/cloud/dev/c++/renderer/include/renderer/core/textures/stb_image.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
