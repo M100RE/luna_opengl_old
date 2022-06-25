@@ -2,7 +2,7 @@
 
 #include <glad/glad.h>
 
-shape::shape(const void* vertices, const int vertices_size, const void* indices, const int indices_size, const char* vertex_path, const char* fragment_path)
+shape::shape(const float* vertices, const int vertices_size, const unsigned int* indices, const int indices_size, const char* vertex_path, const char* fragment_path)
     : program(vertex_path, fragment_path)
 {
     elements = indices != nullptr;
@@ -58,4 +58,10 @@ shader_program shape::receive_shader()
 {
     program.use();
     return program;
+}
+
+shape::~shape()
+{
+    delete[] current_vertices;
+    delete[] current_indices;
 }

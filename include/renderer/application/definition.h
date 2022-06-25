@@ -25,7 +25,7 @@ private:
     RENDERER_ENUM xdef, ydef;
     float r, g, b, a;
 
-    int x1, y1, x2, y2; 
+    float _x1, _y1, _x2, _y2; 
 
 //--string editing
     std::string& remove_spaces(std::string& str);
@@ -34,6 +34,9 @@ private:
     void extract_definition(std::string& input, RENDERER_ENUM request_type);
     std::string get_argument(std::string input, std::string argument, int& argument_start, int& argument_end);
     std::string parse_external_request(std::string input);
+    void parse_constraints(std::string definition);
+    void parse_alignment(std::string definition);
+    void parse_color(std::string definition);
 //--end
 
     void calculate_positions();
@@ -42,6 +45,10 @@ public:
     /*temp*/definition();
     void parse_definition(std::string definition, RENDERER_ENUM request_type = EXTERNAL);
     void update(int window_width, int window_height);
+    float x1() const;
+    float y1() const;
+    float x2() const;
+    float y2() const;
 };
 
 #endif

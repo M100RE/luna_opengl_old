@@ -4,7 +4,6 @@
 #include "renderer/application/window.h"
 #include <iostream>
 #include <string>
-#include "renderer/application/definition.h"
 
 int window_width = 400;
 int window_height = 400;
@@ -36,11 +35,16 @@ int main()
     //panel example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
 
     definition example;
+    example.parse_definition("main_panel; ../panels.def");
+
+    panel f = "x: 50% - 50px; y: 50% - 50px; width: 100px; height: 100px";
     
     while(!main_frame.window_should_close())
     {
         glClearColor(0.0f, 0.0f, 0.0f, 0.6f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        f.update(window_width, window_height);
 
         main_frame.swap_buffers();
         glfwPollEvents();

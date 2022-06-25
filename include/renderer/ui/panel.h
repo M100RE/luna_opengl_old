@@ -4,22 +4,26 @@
 #include "renderer/core/shape.h"
 #include "renderer/application/definition.h"
 
-struct color
-{
-    float r, g, b, a;
-
-    color(float r, float g, float b, float a)
-        : r(r / 255.0f), g(g / 255.0f), b(b / 255.0f), a(a)
-    {}
-};
-
 class panel : private shape
 {
 private:
     definition def;
-    color definite_color;
+float place_holder[8] = 
+{
+    0, 0,
+    0, 0,
+    0, 0,
+    0, 0
+};
+
+unsigned int indices[8]
+{
+    0, 1, 2,
+    0, 3, 1
+};
 public:
-    panel(const char* definition, DEFINITION_ENUM type = EXTERNAL);
+    panel(const char* definition, RENDERER_ENUM type = EXTERNAL);
+    void update(int window_width, int window_height);
 };
 
 #endif

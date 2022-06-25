@@ -5,9 +5,7 @@
 
 constraint::constraint(float value, RENDERER_ENUM type)
     : value(value), type(type)
-{
-
-}
+{}
 
 definition::definition()
 {
@@ -74,8 +72,8 @@ void definition::extract_value(std::string value, float& number, RENDERER_ENUM& 
     number = std::stod(value.substr(0, type_start));
 
     std::string string_type = value.substr(type_start);
-    std::string valid_types[] = {"px", "per", "%", "rel", "rpx", "rper", "r%", "rrel"};
-    RENDERER_ENUM mapped_types[] = {PX, PER, PER, REL, RPX, RPER, RPER, RREL}; 
+    std::string valid_types[] = {"px", "per", "%", "rel"};
+    RENDERER_ENUM mapped_types[] = {PX, PER, PER, REL}; 
     
     for(int j = 0; j < sizeof(valid_types) / sizeof(std::string); j++)
     {
@@ -109,12 +107,10 @@ std::string definition::get_argument(std::string definition, std::string argumen
     return definition.substr(argument_start, argument_end - argument_start);
 }
 
-void definition::parse_definition(std::string definition, RENDERER_ENUM request_type)
+void definition::parse_constraints(std::string definition)
 {
-    extract_definition(definition, request_type);
-
     std::string arguments[] = {"x", "y", "width", "height"};
-    void* argument_attributes[] = {&x, &y, &width, &height};
+    std::vector<constraint>* argument_attributes[] = {&x, &y, &width, &height};
     
     for(int i = 0; i < sizeof(arguments) / sizeof(std::string); i++)
     {
@@ -141,12 +137,79 @@ void definition::parse_definition(std::string definition, RENDERER_ENUM request_
                 float number;
                 RENDERER_ENUM type;
                 extract_value(value, number, type);
-                constraint final_value(number, type);
 
-                argument_attributes[i]->push_back(final_value);
+                argument_attributes[i]->push_back(constraint(number, type));
 
                 value_start = value_end;
-            };
+            }; 
+ 
         }
     }
 } 
+
+void definition::parse_alignment(std::string definition)
+{
+    std::string arguments[] = {"xdef", "ydef"};
+    RENDERER_ENUM* mapped_arguments[] = {&xdef, &ydef};
+    
+    std::string valid_types[] = {"down", "up", "right", "left"};
+    RENDERER_ENUM mapped_types[] = {DOWN, UP, RIGHT, LEFT}; 
+
+    for(int i = 0; i < sizeof(arguments) / sizeof(std::string); i++)
+    {
+        int argument_end, argument_start;
+        std::string argument = get_argument(definition, arguments[i], argument_start, argument_end);
+        if(argument != "--argument_not_found--")
+        {
+            for(int j = 0; j < sizeof(valid_types) / sizeof(std::string); j++)
+            {
+                if(argument == valid_types[j])
+                {
+                    *mapped_arguments[i] = mapped_types[j];
+                }
+            }
+        }
+    }
+}
+
+void definition::parse_color(std::string definition)
+{
+    std::string arguments[] = {"r", "g", "b", "a"};
+    float* mapped_arguments[] ={&r, &g, &b, &a};
+
+    for(int i = 0; i < sizeof(arguments) / sizeof(std::string); i++)
+    {
+        int argument_end, argument_start;
+        std::string argument = get_argument(definition, arguments[i], argument_start, argument_end);
+        if(argument != "--argument_not_found--")
+        {
+
+        }
+    }
+}
+
+void definition::parse_definition(std::string definition, RENDERER_ENUM request_type)
+{
+    extract_definition(definition, request_type);
+    parse_constraints(definition);
+    parse_alignment(definition);
+
+    for(int i = 0; i < x.size(); i++)
+    {
+        std::cout << x[i].value << " " << x[i].type << "\n";
+    }
+    for(int i = 0; i < y.size(); i++)
+    {
+        std::cout << y[i].value << " " << y[i].type << "\n";
+    }
+    for(int i = 0; i < width.size(); i++)
+    {
+        std::cout << width[i].value << " " << width[i].type << "\n";
+    }
+    for(int i = 0; i < height.size(); i++)
+    {
+        std::cout << height[i].value << " " << height[i].type << "\n";
+    }
+    std::cout << xdef << "\n";
+    std::cout << ydef << "\n";
+}

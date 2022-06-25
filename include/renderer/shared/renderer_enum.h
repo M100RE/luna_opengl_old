@@ -9,10 +9,6 @@ enum RENDERER_ENUM : int
 /*|*/   PX =        410,          //|
 /*|*/   PER =       411,          //|
 /*|*/   REL =       412,          //| 
-//+-----relative inputs-------------|
-/*|*/   RPX =       420,          //|
-/*|*/   RPER =      421,          //|   
-/*|*/   RREL =      422,          //| 
 //+-----string parsing inputs-------|
 /*|*/   DIRECT =    430,          //|
 /*|*/   EXTERNAL =  431,          //|
