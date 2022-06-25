@@ -3,6 +3,12 @@
 #include <iostream>
 #include <algorithm>
 
+constraint::constraint(float value, RENDERER_ENUM type)
+    : value(value), type(type)
+{
+
+}
+
 definition::definition()
 {
 
@@ -54,7 +60,7 @@ int definition::locate_operators(std::string argument, int start)
     return -1;
 }
 
-void definition::extract_value(std::string value, float& number, DEFINITION_ENUM& type)
+void definition::extract_value(std::string value, float& number, RENDERER_ENUM& type)
 {
     int type_start;
     for(int j = 1; j < value.length(); j++)
@@ -69,7 +75,7 @@ void definition::extract_value(std::string value, float& number, DEFINITION_ENUM
 
     std::string string_type = value.substr(type_start);
     std::string valid_types[] = {"px", "per", "%", "rel", "rpx", "rper", "r%", "rrel"};
-    DEFINITION_ENUM mapped_types[] = {PX, PER, PER, REL, RPX, RPER, RPER, RREL}; 
+    RENDERER_ENUM mapped_types[] = {PX, PER, PER, REL, RPX, RPER, RPER, RREL}; 
     
     for(int j = 0; j < sizeof(valid_types) / sizeof(std::string); j++)
     {
@@ -79,7 +85,7 @@ void definition::extract_value(std::string value, float& number, DEFINITION_ENUM
         }
     }
 }
-void definition::extract_definition(std::string& definition, DEFINITION_ENUM request_type)
+void definition::extract_definition(std::string& definition, RENDERER_ENUM request_type)
 {
     if(request_type == EXTERNAL)
     {
@@ -103,13 +109,12 @@ std::string definition::get_argument(std::string definition, std::string argumen
     return definition.substr(argument_start, argument_end - argument_start);
 }
 
-void definition::parse_definition(std::string definition, DEFINITION_ENUM request_type)
+void definition::parse_definition(std::string definition, RENDERER_ENUM request_type)
 {
     extract_definition(definition, request_type);
 
     std::string arguments[] = {"x", "y", "width", "height"};
-    std::vector<float>* argument_attributes[] = {&x, &y, &width, &height};
-    std::vector<DEFINITION_ENUM>* type_attributes[] = {&type_x, &type_y, &type_width, &type_height};
+    void* argument_attributes[] = {&x, &y, &width, &height};
     
     for(int i = 0; i < sizeof(arguments) / sizeof(std::string); i++)
     {
@@ -134,11 +139,11 @@ void definition::parse_definition(std::string definition, DEFINITION_ENUM reques
                 std::string value = argument.substr(value_start, value_end - value_start);
 
                 float number;
-                DEFINITION_ENUM type;
+                RENDERER_ENUM type;
                 extract_value(value, number, type);
+                constraint final_value(number, type);
 
-                argument_attributes[i]->push_back(number);
-                type_attributes[i]->push_back(type);
+                argument_attributes[i]->push_back(final_value);
 
                 value_start = value_end;
             };
