@@ -10,16 +10,14 @@ struct constraint
     float value;
     RENDERER_ENUM type;
     constraint(float value, RENDERER_ENUM type);
+    float receive_rel_value(int calculating_width);
 };
 
 class definition
 {
 private:
-    int initial_width;
-    int initial_height;
-
-    int window_width;
-    int window_height;
+    int window_width, window_height;
+    int x_start, y_start;
 
     std::vector<constraint> x, y, width, height;
     RENDERER_ENUM xdef, ydef;
@@ -41,14 +39,15 @@ private:
 
     void calculate_positions();
 public:
-    definition(std::string input);
-    /*temp*/definition();
+    definition(std::string input, RENDERER_ENUM request_type = EXTERNAL);
     void parse_definition(std::string definition, RENDERER_ENUM request_type = EXTERNAL);
-    void update(int window_width, int window_height);
+    void update(int x_start, int y_start, int window_width, int window_height);
     float x1() const;
     float y1() const;
     float x2() const;
     float y2() const;
+
+    std::vector<float> receive_vertices() const;
 };
 
 #endif

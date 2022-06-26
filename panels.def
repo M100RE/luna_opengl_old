@@ -1,24 +1,9 @@
-secondary_panel
-{
-    x: 0px - 8px;
-    width: 10px;
-    y: 8px;
-    height: 100r%;
-    xdef: left;
-    ydef: up;
-}
 main_panel
 {
-    x: 0px - 8px + 7px;
-    width: 10r%;
-    y: 50.5% - 12px;
-    height: 50r%;
-    xdef: right;
+    x: 25% - 25px;
+    y: 25% - 25px;
+    width: 100px + 10%;
+    height: 100px + 10%;
+    xdef: right
     ydef: down;
-}
-
-button
-{
-    x: 10px;
-
 }

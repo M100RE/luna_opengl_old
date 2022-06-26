@@ -34,10 +34,8 @@ int main()
 
     //panel example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
 
-    definition example;
-    example.parse_definition("main_panel; ../panels.def");
 
-    panel f = "x: 50% - 50px; y: 50% - 50px; width: 100px; height: 100px";
+    panel f = "main_panel, ../panels.def";
     
     while(!main_frame.window_should_close())
     {

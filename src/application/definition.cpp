@@ -7,9 +7,20 @@ constraint::constraint(float value, RENDERER_ENUM type)
     : value(value), type(type)
 {}
 
-definition::definition()
+definition::definition(std::string input, RENDERER_ENUM request_type)
 {
+    parse_definition(input, request_type);
+}
 
+float constraint::receive_rel_value(int calculating_width)
+{
+    switch(type)
+    {
+        case REL: return value; break;
+        case PX: return (value / calculating_width) * 2 - 1; break;
+        case PER: return (value / 100) * 2 - 1; break;
+        default: return -1000;
+    }
 }
 
 std::string& definition::remove_spaces(std::string& str)
@@ -212,4 +223,58 @@ void definition::parse_definition(std::string definition, RENDERER_ENUM request_
     }
     std::cout << xdef << "\n";
     std::cout << ydef << "\n";
+}
+
+void definition::calculate_positions()
+{
+    std::vector<constraint>* arguments[] = {&x, &y, &width, &height};
+    float* mapped_types[] = {&_x1, &_y1, &_x2, &_y2};
+    
+    for(int i = 0; i < 4; i++)
+    {
+        int calculating_width = (i % 2 == 0) ? window_width : window_height;
+        float sum = (*arguments[i])[0].receive_rel_value(calculating_width);
+
+        for(int j = 1; j < arguments[i]->size(); j++)
+        {
+            sum += 1 + (*arguments[i])[j].receive_rel_value(calculating_width);
+        }
+        *mapped_types[i] = sum;
+    }
+    _x1 += 1 + x_start;
+    _y1 += 1 + y_start;
+    _x2 += 1 + _x1;
+    _y2 += 1 + _y1;
+
+    if(ydef == UP)
+    {
+        _y1 *= -1;
+        _y2 *= -1;    
+    }
+    if(xdef == RIGHT)
+    {
+        _x1 *= -1;
+        _x2 *= -1;
+    }
+}
+
+void definition::update(int x_start, int y_start, int window_width, int window_height)
+{
+    this->window_width = window_width;
+    this->window_height = window_height;
+    this->x_start = x_start;
+    this->y_start = y_start;
+
+    calculate_positions();
+}
+
+std::vector<float> definition::receive_vertices() const
+{
+    return 
+    {
+        _x1, _y1,
+        _x2, _y1,
+        _x2, _y2,
+        _x1, _y2 
+    };
 }
