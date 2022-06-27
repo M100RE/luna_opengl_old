@@ -1,3 +1,0 @@
-/home/m100re/cloud/dev/c++/luna/build/CMakeFiles/luna.dir
-/home/m100re/cloud/dev/c++/luna/build/CMakeFiles/edit_cache.dir
-/home/m100re/cloud/dev/c++/luna/build/CMakeFiles/rebuild_cache.dir
