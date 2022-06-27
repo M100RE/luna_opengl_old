@@ -10,14 +10,15 @@ struct constraint
     float value;
     RENDERER_ENUM type;
     constraint(float value, RENDERER_ENUM type);
-    float receive_rel_value(int calculating_width);
+    float receive_rel_value(int calculating_width, int relative_calculating_width);
 };
 
 class definition
 {
 private:
     int window_width, window_height;
-    int x_start, y_start;
+    int relative_window_width, relative_window_height;
+    float x_start, y_start;
 
     std::vector<constraint> x, y, width, height;
     RENDERER_ENUM xdef, ydef;
@@ -37,11 +38,13 @@ private:
     void parse_color(std::string definition);
 //--end
 
+    int rel_to_px(float value, int calculating_width);
     void calculate_positions();
 public:
     definition(std::string input, RENDERER_ENUM request_type = EXTERNAL);
     void parse_definition(std::string definition, RENDERER_ENUM request_type = EXTERNAL);
     void update(int x_start, int y_start, int window_width, int window_height);
+    void update(const definition& parent);
     float x1() const;
     float y1() const;
     float x2() const;

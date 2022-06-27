@@ -27,3 +27,12 @@ void panel::update(int window_width, int window_height)
     change_vertices(vertices.data(), vertices.size() * sizeof(float));
     draw();
 }
+
+void panel::update(const panel& parent)
+{
+    def.update(parent.def);
+    std::vector<float> vertices = def.receive_vertices();
+    change_vertices(vertices.data(), vertices.size() * sizeof(float));
+
+    draw();
+}

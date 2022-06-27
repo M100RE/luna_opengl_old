@@ -1,9 +1,0 @@
-main_panel
-{
-    x: 25% - 25px;
-    y: 25% - 25px;
-    width: 100px + 10%;
-    height: 100px + 10%;
-    xdef: right
-    ydef: down;
-}

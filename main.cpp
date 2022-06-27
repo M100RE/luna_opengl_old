@@ -31,18 +31,17 @@ int main()
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  
 
     main_frame.set_framebuffer_size_callback(framebuffer_size_callback);
-
-    //panel example(rect_pos(100, 100, 50, 50, PX, PX, PX, PX), color(255, 255, 255, 1), pos_def(false, true), window_width, window_height);
-
-
-    panel f = "main_panel, ../panels.def";
+    
+    panel parent = "parent, ../panels.luna";
+    panel child = "child, ../panels.luna";
     
     while(!main_frame.window_should_close())
     {
         glClearColor(0.0f, 0.0f, 0.0f, 0.6f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        f.update(window_width, window_height);
+        parent.update(window_width, window_height);
+        child.update(parent);
 
         main_frame.swap_buffers();
         glfwPollEvents();

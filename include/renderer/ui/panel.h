@@ -11,6 +11,7 @@ private:
 public:
     panel(const char* definition, RENDERER_ENUM type = EXTERNAL);
     void update(int window_width, int window_height);
+    void update(const panel& parent);
 };
 
 #endif

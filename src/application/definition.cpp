@@ -12,13 +12,16 @@ definition::definition(std::string input, RENDERER_ENUM request_type)
     parse_definition(input, request_type);
 }
 
-float constraint::receive_rel_value(int calculating_width)
+float constraint::receive_rel_value(int calculating_width, int relative_calculating_width)
 {
     switch(type)
     {
-        case REL: return value; break;
-        case PX: return (value / calculating_width) * 2 - 1; break;
-        case PER: return (value / 100) * 2 - 1; break;
+        case REL: return value;
+        case PX: return (value / (calculating_width >> 1)) - 1;
+        case PER: 
+        {
+            return (value / 50) * ((float)relative_calculating_width / calculating_width) - 1;
+        }
         default: return -1000;
     }
 }
@@ -204,40 +207,22 @@ void definition::parse_definition(std::string definition, RENDERER_ENUM request_
     extract_definition(definition, request_type);
     parse_constraints(definition);
     parse_alignment(definition);
-
-    for(int i = 0; i < x.size(); i++)
-    {
-        std::cout << x[i].value << " " << x[i].type << "\n";
-    }
-    for(int i = 0; i < y.size(); i++)
-    {
-        std::cout << y[i].value << " " << y[i].type << "\n";
-    }
-    for(int i = 0; i < width.size(); i++)
-    {
-        std::cout << width[i].value << " " << width[i].type << "\n";
-    }
-    for(int i = 0; i < height.size(); i++)
-    {
-        std::cout << height[i].value << " " << height[i].type << "\n";
-    }
-    std::cout << xdef << "\n";
-    std::cout << ydef << "\n";
 }
 
 void definition::calculate_positions()
 {
     std::vector<constraint>* arguments[] = {&x, &y, &width, &height};
     float* mapped_types[] = {&_x1, &_y1, &_x2, &_y2};
-    
+
     for(int i = 0; i < 4; i++)
     {
+        float sum = 0;
         int calculating_width = (i % 2 == 0) ? window_width : window_height;
-        float sum = (*arguments[i])[0].receive_rel_value(calculating_width);
+        int relative_calculating_width = (i % 2 == 0) ? relative_window_width : relative_window_height;
 
-        for(int j = 1; j < arguments[i]->size(); j++)
+        for(int j = 0; j < arguments[i]->size(); j++)
         {
-            sum += 1 + (*arguments[i])[j].receive_rel_value(calculating_width);
+            sum += ((j != 0) ? 1 : 0) + (*arguments[i])[j].receive_rel_value(calculating_width, relative_calculating_width);
         }
         *mapped_types[i] = sum;
     }
@@ -245,23 +230,14 @@ void definition::calculate_positions()
     _y1 += 1 + y_start;
     _x2 += 1 + _x1;
     _y2 += 1 + _y1;
-
-    if(ydef == UP)
-    {
-        _y1 *= -1;
-        _y2 *= -1;    
-    }
-    if(xdef == RIGHT)
-    {
-        _x1 *= -1;
-        _x2 *= -1;
-    }
 }
 
 void definition::update(int x_start, int y_start, int window_width, int window_height)
 {
     this->window_width = window_width;
     this->window_height = window_height;
+    relative_window_width = window_width;
+    relative_window_height = window_height;
     this->x_start = x_start;
     this->y_start = y_start;
 
@@ -270,11 +246,55 @@ void definition::update(int x_start, int y_start, int window_width, int window_h
 
 std::vector<float> definition::receive_vertices() const
 {
+    float local_x1 = _x1;
+    float local_x2 = _x2;
+    float local_y1 = _y1;
+    float local_y2 = _y2;
+    if(ydef == UP)
+    {
+        local_y1 *= -1;
+        local_y2 *= -1;    
+    }
+    if(xdef == RIGHT)
+    {
+        local_x1 *= -1;
+        local_x2 *= -1;
+    }
     return 
     {
-        _x1, _y1,
-        _x2, _y1,
-        _x2, _y2,
-        _x1, _y2 
+        local_x1, local_y1,
+        local_x2, local_y1,
+        local_x2, local_y2,
+        local_x1, local_y2 
     };
+}
+
+int definition::rel_to_px(float value, int calculating_width)
+{
+    return (value + 1) / 2 * calculating_width;
+}
+
+void definition::update(const definition& parent)
+{
+    x_start = parent._x1; //* ((parent.xdef == RIGHT) ? -1 : 1);
+    y_start = parent._y1; //* ((parent.ydef == UP) ? -1 : 1);
+    relative_window_width = rel_to_px(parent._x2, parent.window_width) - rel_to_px(parent._x1, parent.window_width);
+    relative_window_height = rel_to_px(parent._y2, parent.window_height) - rel_to_px(parent._y1, parent.window_height);
+    window_width = parent.window_width;
+    window_height = parent.window_height;
+
+    calculate_positions();
+    /*
+    std::vector<float> sui = receive_vertices();
+    std::cout << "-------start-------\n";
+    for(int i = 0; i < sui.size() / 2; i++)
+    {
+        for(int j = 0; j < 2; j++)
+        {
+            std::cout << sui[2 * i + j] << "|";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "-------start-------\n";
+    */
 }
