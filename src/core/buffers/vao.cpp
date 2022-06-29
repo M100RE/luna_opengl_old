@@ -1,4 +1,4 @@
-#include "renderer/core/buffers/vao.h"
+#include "luna/core/buffers/vao.h"
 #include <glad/glad.h>
 
 VAO::VAO()

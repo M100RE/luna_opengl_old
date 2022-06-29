@@ -7,8 +7,6 @@ private:
     unsigned int id;
     unsigned int vertex_id;
     unsigned int fragment_id;
-    const char* vertex_source;
-    const char* fragment_source;
 public:
     shader_program(const char* vertex_path, const char* fragment_path);
     void compile();

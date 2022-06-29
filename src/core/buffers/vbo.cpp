@@ -1,4 +1,4 @@
-#include "renderer/core/buffers/vbo.h"
+#include "luna/core/buffers/vbo.h"
 #include <glad/glad.h>
 #include <iostream>
 

@@ -1,4 +1,4 @@
-#include "renderer/application/window.h"
+#include "luna/application/window.h"
 
 window::window(int width, int height, const char* title)
     : _width(width), _height(height),
@@ -11,6 +11,12 @@ const GLFWwindow* window::window_ptr() const
 {
     return _window;
 }
+
+GLFWwindow* window::window_ptr()
+{
+    return _window;
+}
+
 bool window::window_should_close() const
 {
     return glfwWindowShouldClose(_window);

@@ -13,6 +13,7 @@ public:
     window(int width, int height, const char* title);
 
     const GLFWwindow* window_ptr() const;
+    GLFWwindow* window_ptr();
     bool window_should_close() const;   
     int width() const;
     int height() const;

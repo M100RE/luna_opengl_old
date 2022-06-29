@@ -1,4 +1,4 @@
-#include "renderer/core/buffers/ebo.h"
+#include "luna/core/buffers/ebo.h"
 
 #include <glad/glad.h>
 
