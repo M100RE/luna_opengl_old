@@ -1,11 +1,8 @@
-//#include "renderer/application/parser.h"
 #include "luna/application/definition/parser.h"
 #include "luna/shared/file_parser.h"
 
 #include <algorithm>
-#include <type_traits>
 #include <vector>
-#include <iostream>
 
 std::string& luna::parser::remove_spaces(std::string& str)
 {
